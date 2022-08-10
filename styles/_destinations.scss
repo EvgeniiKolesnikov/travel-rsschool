@@ -1,0 +1,212 @@
+.destinations {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  // height: 1042px;
+
+  overflow: hidden;
+  background-color: $fff;
+
+  &__title {
+    padding-bottom: 46px;
+    @media screen and (max-width: 390px) {
+      padding-bottom: 20px;
+    }
+  }
+  &__list {
+    // height: 800px;
+
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    overflow: hidden;
+
+    list-style: none;
+    transition: .7s;
+  }
+  &__item {
+    position: relative;
+  }
+  &__img {
+    pointer-events: none;
+    width: 800px;
+    height: 800px;
+    border-radius: 16px;
+    @media screen and (max-width: 390px) {
+      width: 360px;
+      height: 210px;
+    }
+  }
+  &__text {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    padding-left: 15px;
+    padding-bottom: 40px;
+
+    font-family: "Red Hat Text";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+
+    color: $fff;
+    @media screen and (max-width: 390px) {
+      left: 0;
+      top: 0;
+      padding: 8px 0 0 15px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+  &__prev {
+    position: absolute;
+    // background-color: #ff00008f;
+    z-index: 1;
+    // left: calc(50% - 400px);
+    left: -540px;
+    top: 98px;
+    /* margin-right: 860px; */
+    width: 800px;
+    height: 800px;
+    border-radius: 16px;
+    @media screen and (max-width: 390px) {
+      display: none;
+    }
+  }
+
+  &__next {
+    position: absolute;
+    // background-color: #ff00008f;
+    z-index: 1;
+    right: -540px;
+    top: 98px;
+    /* margin-right: 860px; */
+    width: 800px;
+    height: 800px;
+    border-radius: 16px;
+    @media screen and (max-width: 390px) {
+      display: none;
+    }
+  }
+
+  &__points {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 24px 0 40px;
+    @media screen and (max-width: 390px) {
+      z-index: 2;
+      gap: 6px;
+      margin: -20px 0 22px;
+    }
+  }
+  &__point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $primary50;
+    &--active {
+      background-color: $primary;
+    }
+    @media screen and (max-width: 390px) {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  &__left-button {
+    display: none;
+    z-index: 2;
+    top: 130px;
+    left: 21px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: $primary;
+    // background-image: url(./svg/arrow_button.svg);
+    mask-image: url(./svg/arrow_button.svg);
+    cursor: pointer;
+    @media screen and (max-width: 390px) {
+      display: block;
+    }
+  }
+  &__right-button {
+    display: none;
+    z-index: 2;
+    top: 130px;
+    right: 21px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: $primary;
+    // background-image: url(./svg/arrow_button.svg);
+    mask-image: url(./svg/arrow_button.svg);
+    cursor: pointer;
+    transform: rotate(180deg);
+    @media screen and (max-width: 390px) {
+      display: block;
+    }
+  }
+}
+
+.destination1 {
+  background-image: url(./img/destination1.jpg);
+  @media screen and (max-width: 390px) {
+    background-image: url(./img/destination1_m.jpg);
+  }
+}
+
+.destination2 {
+  background-image: url(./img/destination2.jpg);
+  @media screen and (max-width: 390px) {
+    background-image: url(./img/destination2_m.jpg);
+  }
+}
+
+.destination3 {
+  background-image: url(./img/destination3.jpg);
+  @media screen and (max-width: 390px) {
+    background-image: url(./img/destination3_m.jpg);
+  }
+}
+
+.slide0 {
+  // order: 0;
+}
+
+.slide1 {
+  // order: 1;
+}
+
+.slide2 {
+  // order: 2;
+}
+
+
+.disable {
+  background-color: $primary50;
+}
+
+.left-pos {
+  margin-right: -1720px;
+  @media screen and (max-width: 390px) {
+    margin-right: -840px;
+  }
+}
+
+.center-pos {
+  margin-right: 0px;
+  @media screen and (max-width: 390px) {
+    margin-right: 0px;
+  }
+}
+
+.right-pos {
+  margin-right: 1720px;
+  @media screen and (max-width: 390px) {
+    margin-right: 840px;
+  }
+}

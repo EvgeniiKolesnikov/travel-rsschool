@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1" />
+    <meta
+      name="description"
+      content="Travel Portal - Personalized recommendations for countries, hotels, activities and more. Plan Your Trip, Destinations, Travel Stories"
+    />
+    <meta
+      name="keywords"
+      content="travel, countries, hotels, activities, trip, destinations, travel stories"
+    />
+    <meta name="author" content="Evgenii Kolesnikov" />
+    <link href="./style.css" rel="stylesheet" />
+    <link href="https://unpkg.com/@csstools/normalize.css" rel="stylesheet" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <title>Travel Portal</title>
+    <script defer src="./index.js"></script>
+    <script defer src="./menu.js"></script>
+    <script defer src="./account.js"></script>
+    <script defer src="./slider.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo unselectable">
+        <div class="logo__icon"></div>
+        <div class="logo__title">Travel Portal</div>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#steps">How It Works</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#plan">Plan Your Trip</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#destinations">Destinations</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#stories">Travel Stories</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="button button--login" id="login_menu1">
+        <span class="button__text">Login</span>
+      </button>
+      <div class="header__burger-button" id="burger-button"></div>
+    </header>
+
+    <main class="main">
+      <section class="preview">
+        <h1 class="preview__title">Explore the beauty of the World</h1>
+        <p class="preview__subtitle">
+          Receive personalized recommendations for countries, hotels, activities
+          and more
+        </p>
+        <form class="preview__form form" id="plan" method="get">
+          <div class="form__container">
+            <input
+              class="form__input"
+              type="text"
+              name="search"
+              id="search"
+              autocomplete="off"
+              required
+              placeholder="What would you like to do?"
+            />
+            <button
+              class="button"
+              type="button"
+              onclick="document.location='#'"
+            >
+              <span class="button__text">Start Planning</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="steps" id="steps">
+        <h2 class="steps__title title">3 STEPS TO THE PERFECT TRIP</h2>
+        <ul class="steps__list">
+          <li class="steps__item">
+            <div class="steps__item-logo-bg">
+              <div class="steps__item-logo steps__item-logo--step1"></div>
+            </div>
+            <p class="steps__item-text">Tell us what you want to do</p>
+          </li>
+          <li class="steps__item">
+            <div class="steps__item-logo-bg">
+              <div class="steps__item-logo steps__item-logo--step2"></div>
+            </div>
+            <p class="steps__item-text">Share us preferable dates</p>
+          </li>
+          <li class="steps__item">
+            <div class="steps__item-logo-bg">
+              <div class="steps__item-logo steps__item-logo--step3"></div>
+            </div>
+            <p class="steps__item-text">We will give you recommendations</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="destinations" id="destinations">
+        <h2 class="destinations__title title">POPULAR DESTINATIONS</h2>
+        <div class="destinations__left-button" id="prev"></div>
+        <div class="destinations__right-button" id="next"></div>
+
+        <div class="destinations__prev" id="prevB">
+          </div>
+        <div class="destinations__next" id="nextB">
+          </div>
+          
+        <ul class="destinations__list" id="slider">
+          <li class="destinations__item slide-mirror slide-1">
+            <div class="destinations__img destination3"></div>
+            <p class="destinations__text">USA</p>
+          </li>
+
+          <li class="destinations__item slide slide0">
+            <div class="destinations__img destination1"></div>
+            <p class="destinations__text">SPAIN</p>
+          </li>
+          <li class="destinations__item slide slide1">
+            <div class="destinations__img destination2"></div>
+            <p class="destinations__text">JAPAN</p>
+          </li>
+          <li class="destinations__item slide slide2">
+            <div class="destinations__img destination3"></div>
+            <p class="destinations__text">USA</p>
+          </li>
+
+          <li class="destinations__item slide-mirror slide4">
+            <div class="destinations__img destination1"></div>
+            <p class="destinations__text">SPAIN</p>
+          </li>
+        </ul>
+        <div class="destinations__points">
+          <div class="destinations__point point"></div>
+          <div
+            class="destinations__point point destinations__point--active"
+          ></div>
+          <div class="destinations__point point"></div>
+        </div>
+        <button class="button" type="button" onclick="document.location='#'">
+          <span class="button__svg"></span
+          ><span class="button__text">Find More</span>
+        </button>
+      </section>
+
+      <section class="stories" id="stories">
+        <h2 class="stories__title title">TRAVEL STORIES</h2>
+        <ul class="stories__list">
+          <li class="stories__item">
+            <article class="article">
+              <div class="article__img story1" title="Story 1 img"></div>
+              <div class="article__story">
+                <h3 class="article__title">10 Photos of Attractive Thailand</h3>
+                <p class="article__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                  <a class="article__link" href="#">Read More</a>
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="stories__item">
+            <article class="article">
+              <div class="article__img story2" title="Story 2 img"></div>
+              <div class="article__story">
+                <h3 class="article__title">Canyonlands National Park, Utah</h3>
+                <p class="article__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                  <a class="article__link" href="#">Read More</a>
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="stories__item">
+            <article class="article">
+              <div class="article__img story3" title="Story 3 img"></div>
+              <div class="article__story">
+                <h3 class="article__title">
+                  I left my heart in the Mountains!
+                </h3>
+                <p class="article__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                  <a class="article__link" href="#">Read More</a>
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="stories__item">
+            <article class="article">
+              <div class="article__img story4" title="Story 4 img"></div>
+              <div class="article__story">
+                <h3 class="article__title">The Longest journey in my life!</h3>
+                <p class="article__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla.Lorem ipsum dolor sit a...
+                  <a class="article__link" href="#">Read More</a>
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <button class="button" type="button" onclick="document.location='#'">
+          <span class="button__svg"></span
+          ><span class="button__text">See More </span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="social-media">
+        <ul class="social-media__list">
+          <li
+            class="social-media__item social-media__item--rsschool"
+            title="RSSchool"
+          >
+            <a
+              class="social-media__link"
+              href="https://rs.school/js-stage0/"
+              target="_blank"
+            ></a>
+          </li>
+          <li
+            class="social-media__item social-media__item--github"
+            title="github"
+          >
+            <a
+              class="social-media__link"
+              href="https://github.com/EvgeniiKolesnikov"
+              target="_blank"
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__rights">All Rights Reserved © Travel Portal</div>
+      <div class="social-media">
+        <ul class="social-media__list">
+          <li
+            class="social-media__item social-media__item--instagram"
+            title="instagram"
+          >
+            <a class="social-media__link" href="#"></a>
+          </li>
+          <li
+            class="social-media__item social-media__item--youtube"
+            title="youtube"
+          >
+            <a class="social-media__link" href="#"></a>
+          </li>
+          <li
+            class="social-media__item social-media__item--twitter"
+            title="twitter"
+          >
+            <a class="social-media__link" href="#"></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <nav class="menu" id="menu">
+      <div class="menu__close" id="menu__close"></div>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="#steps">How It Works</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#plan">Plan Your Trip</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#destinations">Destinations</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#stories">Travel Stories</a>
+        </li>
+        <li class="menu__item">
+          <div class="menu__link" id="login_menu2">Account</div>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#stories">Social Media</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="backdrop" id="backdrop"></div>
+
+    <div class="account" id="account">
+      <div class="account__top signup">
+        <div class="account__title">Create account</div>
+      </div>
+
+      <div class="account__top login">
+        <div class="account__title">Log in to your account</div>
+        <div class="account__fb">Sign In with Facebook</div>
+        <div class="account__google">Sign In with Google</div>
+        <fieldset class="account__line">
+          <legend class="account__line-legend">or</legend>
+        </fieldset>
+      </div>
+
+      <form class="account__form" action="" method="dialog">
+        <div class="account__field">
+          <label class="account__label" for="email">E-mail</label>
+          <input
+            class="account__input"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="account__field">
+          <label class="account__label" for="name">Password</label>
+          <input
+            class="account__input"
+            type="password"
+            name="name"
+            id="password"
+            required
+          />
+        </div>
+
+        <div class="account__field">
+          <button class="button account__input account__input--submit">
+            <div class="button__text login" id="sign1">Sign In</div>
+            <div class="button__text signup" id="sign2">Sign Up</div>
+          </button>
+        </div>
+      </form>
+      <div class="account__forgot login">Forgot Your Password?</div>
+      <fieldset class="account__line"></fieldset>
+
+      <div class="account__subtitle login">
+        <span class="account__subtitle-text">Don’t have an account?</span>
+        <span class="account__subtitle-button" id="register">Register</span>
+      </div>
+      <div class="account__subtitle signup">
+        <span class="account__subtitle-text">Already have an account?</span>
+        <span class="account__subtitle-button" id="login">Log in</span>
+      </div>
+    </div>
+  </body>
+</html>

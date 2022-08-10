@@ -1,0 +1,23 @@
+@import "./title";
+@import "./form";
+@import "./article";
+
+@import "./preview";
+@import "./steps";
+@import "./destinations";
+@import "./stories";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  // width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  background-color: $fff;
+  @media screen and (max-width: 390px) { 
+    gap: 20px;
+  }
+}

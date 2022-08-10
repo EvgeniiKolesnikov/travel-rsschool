@@ -1,0 +1,47 @@
+@import "./logo";
+@import "./nav";
+@import "./button";
+@import "./menu";
+@import "./backdrop";
+
+.header {
+  position: relative;
+  z-index: 1;
+
+  // max-width: 1440px;
+  // width: 1440px;
+  height: 90px;
+  margin: 0 auto;
+
+  padding: 0 120px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background-image: linear-gradient($primary70, $primary70), url(./img/bg_up.jpg);
+
+  background-color: $primary70;
+  color: $secondary;
+  box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+  @media screen and (max-width: 390px) {
+    position: absolute;
+    height: 32px;
+    width: 100%;
+    padding: 0 16px;
+    margin-top: 43px;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &__burger-button {
+    display: none;
+    @media screen and (max-width: 390px) {
+      display: block;
+      width: 35px;
+      height: 32px;
+      margin-right: 4px;
+      background-image: url(./svg/burger.svg);
+    }
+  }
+}

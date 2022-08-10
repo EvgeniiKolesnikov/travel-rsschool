@@ -1,0 +1,33 @@
+.nav {
+  margin-right: 38px;
+  @media screen and (max-width: 390px) { 
+    display: none;
+  }
+  &__list {
+    // width: 527px;
+    max-width: 527px;
+    height: 21px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 42px;
+
+    list-style: none;
+  }
+
+  &__link {
+    font-family: 'Red Hat Text';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: $fff;
+
+    transition: ease-in-out .2s;
+
+    &:hover {
+      color: $secondary;
+      filter: drop-shadow(0px 0px 4px white);
+    }
+  }
+}

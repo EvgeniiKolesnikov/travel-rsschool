@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+}
+.nav__list {
+  display: flex;
+}
+.nav__link {
+  font-family: "Red Hat Text";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.header {
+  background-color: rgba(242, 119, 92, 0.7);
+  color: #0d606f;
+}/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,20 @@
+.title {
+  padding-bottom: 40px;
+  margin: 0 auto;
+
+  // width: 100%;
+  // display: flex;
+  // justify-content: center;
+
+  font-family: "Red Hat Text";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 53px;
+  color: $primary;
+  @media screen and (max-width: 390px) { 
+    padding-bottom: 20px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

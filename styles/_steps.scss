@@ -1,0 +1,111 @@
+.steps {
+  display: flex;
+  flex-direction: column;
+
+  height: 264px;
+
+  background-color: $fff;
+  @media screen and (max-width: 390px) {
+    height: auto;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    // width: 1177px;
+    max-width: 1177px;
+    height: 154px;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1237px;
+    padding: 0 30px;
+    list-style: none;
+    @media screen and (max-width: 390px) {
+      justify-content: space-between;
+      padding: 0 15px;
+      height: auto;
+      // gap: 75px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 390px) {
+      justify-content: flex-start;
+      gap: 20px;
+      width: 120px;
+      text-align: center;
+      &:nth-child(2) {
+        width: 200px;
+      }
+    }
+    &:last-child {
+      margin-left: -71px;
+      @media screen and (max-width: 390px) {
+        // gap: 20px;
+        align-items: flex-end;
+        margin-left: 0;
+        text-align: right;
+      }
+    }
+    &:first-child {
+      @media screen and (max-width: 390px) {
+        // gap: 20px;
+        align-items: flex-start;
+        margin-left: 0;
+        text-align: left;
+      }
+    }
+
+  }
+  &__item-logo-bg {
+    background: $primary;
+    border-radius: 16px;
+  }
+  &__item-logo {
+    width: 100px;
+    height: 100px;
+    background-image: url(./svg/step1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    // mask-image: url(./svg/step1.svg);
+    transition: 0.2s;
+    &:hover {
+      filter: drop-shadow(0px 0px 2px white);
+    }
+    &--step1 {
+      background-image: url(./svg/step1.svg);
+    }
+    &--step2 {
+      background-image: url(./svg/step2.svg);
+    }
+    &--step3 {
+      background-image: url(./svg/step3.svg);
+      &:last-child {
+        @media screen and (max-width: 390px) {
+          background-size: 58%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 390px) {
+      width: 70px;
+      height: 70px;
+      background-size: 50%;
+    }
+  }
+  &__item-text {
+    font-family: "Aleo";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $secondary;
+    @media screen and (max-width: 390px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+  }
+}
